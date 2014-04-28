@@ -611,7 +611,9 @@ class getMFormArray
 
     if ($intSliceId != false)
     {
-      $strTable = 'rex_article_slice';
+      $this->getGlobalRex();
+	
+      $strTable = $this->REX['TABLE_PREFIX'].'article_slice';
       $strFields = '*';
       $strWhere = 'id="'.$_REQUEST['slice_id'].'"';
 
